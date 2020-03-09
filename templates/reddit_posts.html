@@ -39,37 +39,35 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Links</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.tradingview.com/ideas/btc/" target="_blank">TradingView.com </a>   
+  <a class="w3-bar-item w3-button w3-hover-black" href="https://www.reddit.com/r/CryptoCurrency/" target="_blank">Reddit.com </a>   
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px">
+<div class="w3-main" style= "margin-left:250px">
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">TradingView Trade Ideas</h1>
-      <p> TradingView is a charting and trading information platform. 
-        TradingView can be used to place trades directly when linked with your exchange. 
-        It boasts a large community of active traders who exchange ideas and strategies regarding their trades. 
-        Under the ideas section you can see all recently published trade ideas for any given asset. </p>
+      <h1 class="w3-text-teal">Reddit Posts</h1>
+      <p> Reddit is known as the front page of the internet. 
+        Its is a fourm where you can post, upvote, 
+        discuss and learn about virtualy any topic.
+        The reddit API wrapper know as "Praw" was 
+        used to scrape the the top 300 post from the 
+        CryptoCurrency subreddit looking for mentions of 
+        Btc, Eth, Xmr, Xrp, Dash and Ltc. </p>
         
-        <span style="display:block; height: 10px;"></span>
-
-        <p> Here we have used BeautifulSoup and Python to scrape for data about these trade ideas. 
-        This is a comparison of the amount of Long trade ideas (betting on the price going up) vs the amount  of short trade ideas (betting on the price going down).</p> 
-        This can be used to gauge the sentiment of the traders regarding the price action of Bitcoin.   
-		       <p> -----Data based on 30 most recent pages of idea posts.-----</p>
+        
     </div>
     <div class="w3-third w3-container">
-      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="{{ url_for('static', filename = 'images/TradingView.png')}}" style = ' position: absolute;
-        top: 35px;
-        right: 0px; padding:0px 0px 0px 0px; width:320px; height:155px; margin-right: 0px'></p>
-      <p class=" w3-padding-large w3-padding-64 w3-center"><image src="{{ url_for('static', filename = 'images/Long_vs_Short.png')}}" style =' position: absolute;
+      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="{{ url_for('static', filename = 'images/reddit.png')}}" style = ' position: absolute;
+        top: 45px;
+        right: 0px; padding:0px 0px 0px 0px; width:320px; height:130px; margin-right: 0px'></p>
+      <p class=" w3-padding-large w3-padding-64 w3-center"><image src="{{ url_for('static', filename = 'images/reddit_freq.png')}}" style ='padding:40px 40px 40px 40px; position: absolute;
           top: 190px;
-          right: 0px; height: 210px; width: 430px;' ></p>
+          right: 0px; height: 300px; width: 430px;' ></p>
     </div>
   </div> 
 	
