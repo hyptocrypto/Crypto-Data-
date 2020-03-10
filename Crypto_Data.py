@@ -28,10 +28,5 @@ def trader_bias():
 def reddit_posts():
     return render_template('reddit_posts.html')
 
-@app.route('/test')
-def test():
-    return render_template('home.html')
-
-
 if __name__ == '__main__':
     app.run()
