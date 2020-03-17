@@ -1,3 +1,6 @@
+
+#!/usr/bin/bash
+
 import sys
 sys.path.append('/Users/julianbaumgartner/Desktop/Python/BTC_Data/BTC_Order_Book_Bias')
 sys.path.append('/Users/julianbaumgartner/Desktop/Python/BTC_Data/Long_vs_Short')
