@@ -31,4 +31,4 @@ for mentions of certain cryptocurrencies. I believe this is useful data because 
 interest of the public currently resides. 
 
 ### Database 
-All values are gathered daily by the web-scraping programs are added to a database. Once this data base has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect.  
+All values are gathered daily via running the web-scraping programs as a cronjob and are added to a postgres database. Once this database has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect.  
