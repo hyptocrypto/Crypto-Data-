@@ -6,6 +6,7 @@ Given that it is an ecosystem ripe with volatility and ever changing market stru
 I believe it to be beneficial to aggregate different kinds of data
 into one location, with the time of aggregation being the only constant. 
 
+
 ### Orderbook Bias
 Order-book data was scraped via API’s from a few major cryptocurrency exchanges to help
 understand the current flow of capital on the open market. Massive disparities in the order-books 
@@ -28,3 +29,6 @@ developments in existing projects, and the general ups and downs of the market.
 This program used the Reddit API wrapper, known as Praw, to scrape the top 300 posts looking
 for mentions of certain cryptocurrencies. I believe this is useful data because it shows where the 
 interest of the public currently resides. 
+
+### Database 
+All values are gathered daily by the web-scraping programs are added to a database. Once this data base has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect.  
