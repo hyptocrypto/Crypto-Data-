@@ -81,6 +81,7 @@ names = ['Bitcoin','Monero','Ethereum','Ripple','Litecoin','Dash']
 values = [btc, xmr, eth, xrp, ltc, dash]
 
 # Create plot from names and values
+plt.clf()
 plt.style.use('classic')
 plt.bar(names,values)
-plt.savefig('/Users/julianbaumgartner/Desktop/Python/BTC_Data/static/images/reddit_posts.png', bbox_inches = 'tight')
+plt.savefig('/Users/julianbaumgartner/Desktop/Python/BTC_Data/static/images/reddit_postss.png', bbox_inches = 'tight')

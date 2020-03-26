@@ -6,8 +6,8 @@ from flask import Flask, request, render_template, url_for
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def orderbook_bias():
+    return render_template('orderbook_bias.html')
 
 @app.route('/trader_bias')
 def trader_bias():
