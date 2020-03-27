@@ -1,4 +1,4 @@
-k# Crypto-Data
+# Crypto-Data
 
 ### Intro
 This program is intended to be a snapshot into the cryptocurrency space. 
