@@ -1,4 +1,4 @@
-# Crypto-Data
+k# Crypto-Data
 
 ### Intro
 This program is intended to be a snapshot into the cryptocurrency space. 
@@ -31,4 +31,8 @@ for mentions of certain cryptocurrencies. I believe this is useful data because 
 interest of the public currently resides. 
 
 ### Database 
-All values are gathered daily via running the web-scraping programs as a cronjob and are added to a postgres database. Once this database has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect.  
+All values are gathered daily via running the web-scraping programs as a cronjob and are added to a postgres database. Once this database has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect. 
+
+
+## API
+SAFRS is a python module designed to build REST API’s onto of existing databases and expose them neatly though the swagger UI. I modified a few of the scripts to fit my needs. The result is a full access to the postgres database via a dedicated REST API.
