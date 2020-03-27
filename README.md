@@ -34,5 +34,5 @@ interest of the public currently resides.
 All values are gathered daily via running the web-scraping programs as a cronjob and are added to a postgres database. Once this database has a sizable set of data it can be used to find correlations or patterns between upticks in order book volume and price or popularity on reddit and on exchange volume ect. 
 
 
-## API
+### API
 SAFRS is a python module designed to build REST API’s onto of existing databases and expose them neatly though the swagger UI. I modified a few of the scripts to fit my needs. The result is a full access to the postgres database via a dedicated REST API.
