@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Trader Bias</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,9 +23,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">OrderBook Bias</a>
+    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+    <a href="/orderbook_bias" class="w3-bar-item w3-button w3-hide-small w3-hover-white">OrderBook Bias</a>
     <a href="/trader_bias" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Trader Bias</a>
     <a href="/reddit_posts" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reddit Posts</a>
+
 
   </div>
 </div>
@@ -55,24 +57,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
         
         <span style="display:block; height: 10px;"></span>
 
-        <p> Here we have used BeautifulSoup and Python to scrape for data about these trade ideas. 
+        <p> Pythons Beautifulsoup library was used to scrape for data about these trade ideas. 
         This is a comparison of the amount of Long trade ideas (betting on the price going up) vs the amount  of short trade ideas (betting on the price going down).</p> 
         This can be used to gauge the sentiment of the traders regarding the price action of Bitcoin.   
 		       <p> -----Data based on 30 most recent pages of idea posts.-----</p>
     </div>
     <div class="w3-third w3-container">
-      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="{{ url_for('static', filename = 'images/TradingView.png')}}" style = ' position: absolute;
-        top: 35px;
-        right: 0px; padding:0px 0px 0px 0px; width:320px; height:155px; margin-right: 0px'></p>
-      <p class=" w3-padding-large w3-padding-64 w3-center"><image src="{{ url_for('static', filename = 'images/Long_vs_Short.png')}}" style ='padding: 20px 20px 20px 20px; position: absolute;
-          top: 190px;
-          right: 0px; height: 260px; width: 430px;' ></p>
+      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/TradingView.png" 
+      style = 'position: absolute; top: 80px; left: 1400px; width:480px; height:200px;'></p>
+      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/Long_vs_Short.png" 
+      style ='position: absolute; top: 350px; left: 1290px; height: 300px; width: 500px;' ></p>
     </div>
   </div> 
 	
-  <span style="display:block; height: 400px;"></span>
+    
+
+    <div class="w3-row">
+      <div class="w3-twothird w3-container">
+        <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/tradingview_longs_corr.png" 
+          style = 'position: absolute; width:540px; height:310px; top: 440px; left: 850px;'></p>
+        <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/tradingview_shorts_corr.png" 
+          style = 'position: absolute; width:560px; height:310px; position: absolute; top: 440px; left: 270px;' ></p>
+      </div>
+    </div>
 
 
+      <span style="display:block; height: 500px;"></span>
 
   </pre>
 

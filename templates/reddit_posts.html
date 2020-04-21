@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Reddit Instances</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,9 +23,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">OrderBook Bias</a>
+    <a href="/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+    <a href="/orderbook_bias" class="w3-bar-item w3-button w3-hide-small w3-hover-white">OrderBook Bias</a>
     <a href="/trader_bias" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Trader Bias</a>
     <a href="/reddit_posts" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reddit Posts</a>
+
 
   </div>
 </div>
@@ -49,30 +51,47 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Reddit Posts</h1>
       <p> Reddit is known as the front page of the internet. 
-        Its is a fourm where you can post, upvote, 
+        On this fourm you can post, upvote, 
         discuss and learn about virtualy any topic.
         The reddit API wrapper know as "Praw" was 
         used to scrape the the top 300 post from the 
         CryptoCurrency subreddit looking for mentions of 
         Btc, Eth, Xmr, Xrp, Dash and Ltc. </p>
-        
+      <p>The graphs below are intended to show correlation between the popularity of a specific cryptocurrency on reddit, and its price in USD. 
+        Looking for correlations is an attempt to answer weather interest follows price or whether it's a predecessor? </p>  
         
     </div>
     <div class="w3-third w3-container">
-      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="{{ url_for('static', filename = 'images/reddit.png')}}" style = ' position: absolute;
-        top: 45px;
-        right: 0px; padding:0px 0px 0px 0px; width:320px; height:130px; margin-right: 0px'></p>
-      <p class=" w3-padding-large w3-padding-64 w3-center"><image src="{{ url_for('static', filename = 'images/reddit_postss.png')}}" style ='padding:40px 40px 40px 40px; position: absolute;
-          top: 190px;
-          right: 0px; height: 300px; width: 430px;' ></p>
+      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit.png"
+       style = ' position: absolute; top: 80px; left: 1500px; height: 130px; width: 350px '></p>
+      <p class=" w3-padding-large w3-padding-32 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_postss.png" 
+      style =' position: absolute; top: 270px; left: 1450px; height: 300px; width: 430px;' ></p>
     </div>
   </div> 
 	
-  <span style="display:block; height: 400px;"></span>
+  <span style="display:block; height: 100px;"></span>
 
-
+      <div class="w3-row">
+        <div class="w3-twothird w3-container">
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_btc_corr.png" 
+            style = 'width:540px; height:310px; position: absolute; top: 300px; left: 820px;'></p>
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_eth_corr.png" 
+            style = 'width:560px; height:310px; position: absolute; top: 300px; left: 260px;' ></p>
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_ltc_corr.png" 
+            style = 'width:540px; height:310px; position: absolute; top: 650px; left: 820px;'></p>
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_xmr_corr.png" 
+            style = 'width:560px; height:310px; position: absolute; top: 650px; left: 260px;' ></p> 
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_xrp_corr.png" 
+            style = 'width:540px; height:310px; position: absolute; top: 1000px; left: 820px;'></p>
+          <p class=" w3-padding-large w3-padding-16 w3-center"><image src="https://crypto-data-bucket.s3.amazonaws.com/static/reddit_inst_dash_corr.png" 
+            style = 'width:560px; height:310px; position: absolute; top: 1000px; left: 260px;' ></p> 
+        </div>
+      </div>
 
   </pre>
+
+  <span style="display:block; height: 1100px;"></span>
+
 
   <!-- Pagination -->
   <!div class="w3-center w3-padding-32">

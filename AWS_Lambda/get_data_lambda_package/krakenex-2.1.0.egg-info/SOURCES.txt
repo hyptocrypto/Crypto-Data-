@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+krakenex/__init__.py
+krakenex/api.py
+krakenex/version.py
+krakenex.egg-info/PKG-INFO
+krakenex.egg-info/SOURCES.txt
+krakenex.egg-info/dependency_links.txt
+krakenex.egg-info/requires.txt
+krakenex.egg-info/top_level.txt
