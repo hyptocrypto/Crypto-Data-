@@ -1,11 +1,13 @@
 # Crypto_Data.py
 
-from flask import Flask, request, render_template
-
+from flask import Flask, request, render_template, jsonify
+import psycopg2
+from psycopg2 import sql
 
 app = Flask(__name__)
 
 
+#########  Webpage -html- routes ##########
 
 @app.route('/')
 def home():
@@ -22,6 +24,87 @@ def trader_bias():
 @app.route('/reddit_posts')
 def reddit_posts():
     return render_template('reddit_posts.html')
+
+
+
+
+
+######  DB CONNECTION #########
+
+class DB_Querry:
+    
+    def __init__(self, host, database, user, password, port):
+        self.host = host
+        self.database = database
+        self.user = user
+        self.password = password
+        self.port = port
+        
+        self.con = psycopg2.connect( host = 'cryptodb.cujx43zpek8h.us-east-1.rds.amazonaws.com',
+                        database = self.database,
+                        user = self.user,
+                        password = self.password,
+                        port = self.port)
+        
+        self.cur = self.con.cursor()
+    
+    def querry_column(self, column):
+        
+        try:
+            self.cur.execute(sql.SQL('SELECT {} FROM crypto_data;').format(sql.Identifier(column)))
+            data = self.cur.fetchall()
+            data = [i[0] for i in data]
+            return{column: data}
+            cur.close()
+            con.close()
+        except:
+            return 'Invalid Querry Paramater'
+        
+    def querry_date(self, date):
+        
+        try:
+            self.cur.execute(sql.SQL("SELECT * FROM crypto_data WHERE date = '{}'; ").format(sql.Identifier(date)))
+            data = self.cur.fetchall()
+            return {date: data}
+            cur.close()
+            con.close()
+        except:
+            return 'Invalid Querry Paramater'
+        
+crypto_data_db = DB_Querry('cryptodb.cujx43zpek8h.us-east-1.rds.amazonaws.com', 
+                           'postgres', 'postgres', 'pg1234321.', '5432')
+
+
+
+
+
+
+
+
+
+
+
+
+# API Routes 
+
+@app.route('/api/v1/column/<column>', methods=['GET'])
+def API_column(column):
+    return crypto_data_db.querry_column(column)
+    
+
+@app.route('/api/v1/date/<date>', methods=['GET'])
+def API_date(date):
+    return crypto_data_db.querry_date(date)
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
