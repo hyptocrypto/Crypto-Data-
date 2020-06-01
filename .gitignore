@@ -1,9 +1,7 @@
-AWS_Lambda/
-
-
 .DS_store 
 .ipynp_checkpoints/
 *__pycache__
 *.ipynb
 *static/
 .env
+*AWS_Lambda/
