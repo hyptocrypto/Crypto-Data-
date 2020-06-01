@@ -3,6 +3,9 @@
 from flask import Flask, request, render_template, jsonify
 import psycopg2
 from psycopg2 import sql
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -40,7 +43,7 @@ class DB_Querry:
         self.password = password
         self.port = port
         
-        self.con = psycopg2.connect( host = 'cryptodb.cujx43zpek8h.us-east-1.rds.amazonaws.com',
+        self.con = psycopg2.connect( host = self.host,
                         database = self.database,
                         user = self.user,
                         password = self.password,
@@ -48,6 +51,7 @@ class DB_Querry:
         
         self.cur = self.con.cursor()
     
+    # Method to return all values form column passed as argument
     def querry_column(self, column):
         
         try:
@@ -59,7 +63,8 @@ class DB_Querry:
             con.close()
         except:
             return 'Invalid Querry Paramater'
-        
+
+   # Method to return all values from date passed as argument     
     def querry_date(self, date):
         
         try:
@@ -70,9 +75,11 @@ class DB_Querry:
             con.close()
         except:
             return 'Invalid Querry Paramater'
-        
-crypto_data_db = DB_Querry('cryptodb.cujx43zpek8h.us-east-1.rds.amazonaws.com', 
-                           'postgres', 'postgres', 'pg1234321.', '5432')
+
+ 
+# DB_Querry instance for AWS_RDS
+crypto_data_db = DB_Querry(os.environ.get('DB_HOST'), 
+                           'postgres', 'postgres', os.environ.get('DB_PASS'), '5432')
 
 
 
