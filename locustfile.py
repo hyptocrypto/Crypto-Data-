@@ -17,16 +17,21 @@ class Load_tester(HttpUser):
 
     @task
     def index_page(self):
-        self.client("/orderbook_bias")
-        self.client("/trader_bias")
-        self.client("/reddit_posts")
+        self.client.get("localhost:5000/")
+        self.client.get("localhost:5000/orderbook_bias")
+        self.client.get("localhost:5000/trader_bias")
+        self.client.get("localhost:5000/reddit_posts")
 
     @task(3)
     def api_call_date(self):
         date=datetime.date((2020), random.randint(4,5), random.randint(1,28))
-        self.client('/aip/v1/date/<date>')
+        self.client.get(f'localhost:5000/api/v1/date/{date}')
 
     @task(3)
     def api_call_column(self):
         column = random.choice(columns)
-        self.client('/api/v1/column/<column>') 
+        self.client.get(f'localhost:5000/api/v1/column/{column}') 
+
+
+    def on_start(self):
+        self.client.get('localhost:5000/')
