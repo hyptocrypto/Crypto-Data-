@@ -5,5 +5,5 @@ flask-swagger-ui==3.20.9
 inflect==2.1.0
 jsonschema==3.0.1
 PyMySQL==0.9.3
-PyYAML==5.1
+PyYAML==5.4
 validate-email==1.3
